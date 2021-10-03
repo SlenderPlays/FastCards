@@ -3,27 +3,19 @@
         xmlns:vm="using:FastCards.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:uc="clr-namespace:FastCards.Views;assembly=FastCards"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="FastCards.Views.MainWindow"
+				x:Class="FastCards.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
         Title="Fast Cards!" >
 	<!-- SystemDecorations="BorderOnly"-->
-
-
 	<Design.DataContext>
 		<vm:MainWindowViewModel/>
 	</Design.DataContext>
 
-	<StackPanel HorizontalAlignment="Center" 
-							VerticalAlignment="Center">
-		<TextBlock Text="{Binding Greeting}"
-							 HorizontalAlignment="Center"/>
-		
-		<Button Content="Go!"
-						HorizontalAlignment="Center"
-						Command="{Binding ButtonClicked}"/>
-		
+	<StackPanel>
+		<Button Command="{Binding Switch}">Switch</Button>
+		<ContentControl Content="{Binding Content}" />
 	</StackPanel>
-
 
 </Window>

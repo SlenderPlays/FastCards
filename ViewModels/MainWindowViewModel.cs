@@ -1,3 +1,5 @@
+using Avalonia.Controls;
+using FastCards.Views;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
@@ -7,21 +9,20 @@ namespace FastCards.ViewModels
 {
 	public class MainWindowViewModel : ViewModelBase
 	{
-		private int clicks = 0;
 
-		private string greeting = "Welcome to Avalonia!";
+		public ViewModelBase content = new Control1ViewModel();
 
-		public string Greeting
+		public ViewModelBase Content
 		{
-			get => greeting;
-			private set => this.RaiseAndSetIfChanged(ref greeting, value);
+			get => content;
+			private set => this.RaiseAndSetIfChanged(ref content, value);
 
 		}
 
-		public void ButtonClicked()
+		public void Switch()
 		{
-			clicks++;
-			Greeting = $"You clicked the button {clicks} times!";
+			if (Content is Control1ViewModel) Content = new Control2ViewModel();
+			else Content = new Control1ViewModel();
 		}
 	}
 }

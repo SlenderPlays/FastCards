@@ -13,4 +13,12 @@
     <PackageReference Include="Avalonia.Diagnostics" Version="0.10.3" />
     <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.3" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\Control1View.axaml.cs">
+      <DependentUpon>Control1View.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Control2View.axaml.cs">
+      <DependentUpon>Control2View.axaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>
