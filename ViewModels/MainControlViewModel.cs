@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FastCards.ViewModels
 {
-	public class Control2ViewModel : ViewModelBase
+	class MainControlViewModel : ViewModelBase
 	{
 	}
 }

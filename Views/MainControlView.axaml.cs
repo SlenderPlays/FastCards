@@ -4,9 +4,9 @@ using Avalonia.Markup.Xaml;
 
 namespace FastCards.Views
 {
-	public partial class Control1View : UserControl
+	public partial class MainControlView : UserControl
 	{
-		public Control1View()
+		public MainControlView()
 		{
 			InitializeComponent();
 		}

@@ -10,19 +10,13 @@ namespace FastCards.ViewModels
 	public class MainWindowViewModel : ViewModelBase
 	{
 
-		public ViewModelBase content = new Control1ViewModel();
+		private ViewModelBase innerViewModel = new MainControlViewModel();
 
-		public ViewModelBase Content
+		public ViewModelBase InnerViewModel
 		{
-			get => content;
-			private set => this.RaiseAndSetIfChanged(ref content, value);
+			get => innerViewModel;
+			private set => this.RaiseAndSetIfChanged(ref innerViewModel, value);
 
-		}
-
-		public void Switch()
-		{
-			if (Content is Control1ViewModel) Content = new Control2ViewModel();
-			else Content = new Control1ViewModel();
 		}
 	}
 }
